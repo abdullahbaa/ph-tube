@@ -16,6 +16,10 @@
     let remainingSecond =time % 3600;
     const minute =parseInt(remainingSecond/60);
     remainingSecond =remainingSecond%60;
-    return `${hour} hour ${minute} Minute ${remainingSecond} Second ago`
+    const year =parseInt(time%12);
+    const day =parseInt(time/30);
+
+    return `${hour} hour ${minute} Minute ${remainingSecond} Second ${year} years ${day} days ago`
+
  }
- console.log(getTimeString(4322990));
+ console.log(getTimeString(770));
